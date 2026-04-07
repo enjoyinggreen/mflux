@@ -208,6 +208,6 @@ class ZImage(nn.Module):
             )
             return noise + guidance * (noise - negative_noise)
 
-        if AppleSiliconUtil.is_m1_or_m2():
-            return predict
+        #if AppleSiliconUtil.is_m1_or_m2():
+        #    return predict
         return mx.compile(predict)
